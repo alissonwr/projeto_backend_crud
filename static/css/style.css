@@ -13,7 +13,8 @@ body {
 
 .container tbody tr td {
     color: white;
-    
+    visibility: hidden;
+
 }
 
 .container tbody tr td:nth-child(3) {

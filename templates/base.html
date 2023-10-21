@@ -11,6 +11,7 @@
     
     <!-- exemplo de importação de uma folha de estilos direto de um link-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
@@ -28,5 +29,20 @@
         cadastro.html ou de index.html-->
         {% block content %} {% endblock %}
     </div>
+    <script>
+        window.sr = ScrollReveal({ reset: true });
+
+        sr.reveal('.view', { duration: 1000 });
+
+        sr.reveal('.view'), {
+            rotate: { x:0, y:80, z:0},
+            duration:2000
+        }
+
+        const botao = document.querySelector('#botao')
+        botao.addEventListener('click', ()=>{
+            botao.style.backgroundColor = 'red';
+        })
+    </script>
 </body>
 </html>
