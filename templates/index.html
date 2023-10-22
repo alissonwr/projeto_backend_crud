@@ -2,11 +2,11 @@
 
 {% block content %}
 <!--Este template corresponde à página que mostrar uma listagem
-de todos os produtos cadastrados-->
+de todos os personagems cadastrados-->
 <div class="container mt-3">
 
     <h1>Personagens</h1>
-    <a href="{{url_for('criar_produto')}}" class="btn btn-primary">Adicionar</a>
+    <a href="{{url_for('criar_personagem')}}" class="btn btn-primary">Adicionar</a>
    
     <table class="table table-striped table-hover">
         <thead>
@@ -21,15 +21,15 @@ de todos os produtos cadastrados-->
         </thead>
         <tbody>
             <!-- É preciso repetir a linha da tabela para cada
-            produto existente no dicionário -->
-            {% for id, produto in produtos.items() %}
+            personagem existente no dicionário -->
+            {% for id, personagem in personagens.items() %}
             <tr>
-                <td>{{ Id }}</td>
-                <td>{{ produto['nome'] }}</td>
-                <td>{{ produto['descricao'] }}</td>
-                <td>{{ produto['casa'] }}</td>
-                <td><img src="{{url_for('static', filename='img/' + produto['imagem'])}}" alt="thumbnail" class="img-thumbnail"></td>
-                <td><a href="{{url_for('exibir_produto', id=id)}}">Editar</a></td>
+                <td class="view">{{ Id }}</td>
+                <td class="view">{{ personagem['nome'] }}</td>
+                <td class="view">{{ personagem['descricao'] }}</td>
+                <td class="view">{{ personagem['casa'] }}</td>
+                <td class="view"><img src="{{ personagem['imagem']}}" alt="thumbnail" class="img-thumbnail"></td>
+                <td class="view"><a href="{{url_for('exibir_personagem', id=id)}}">Editar</a></td>
             </tr>
             {% endfor %}
         </tbody>

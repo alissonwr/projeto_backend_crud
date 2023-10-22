@@ -5,7 +5,7 @@ cadastrar um novo produto ou editar um produto existente -->
 
 {% block content %}
 
-    <h1>Cadastro de Produtos</h1>
+    <h1>Cadastro de Personagens</h1>
     <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
         <div class="form-group">
             <label for="id">ID:</label>
@@ -14,7 +14,7 @@ cadastrar um novo produto ou editar um produto existente -->
         </div>
         <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome" value="{{ id }}" required>
+            <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
             <div class="invalid-feedback">Campo obrigatório.</div>
         </div>
         <div class="form-group">
@@ -31,7 +31,7 @@ cadastrar um novo produto ou editar um produto existente -->
             <label for="imagem">Imagem:</label>
             <p><input type="text" class="form-control" id="imagem" name="imagem" value="{{ imagem }}"></p>
             <p>{% if imagem %}
-            <img src="{{url_for('static', filename='img/' + imagem)}}" style="max-width: 200px; max-height: 200px;">
+            <img src="{{imagem}}" style="max-width: 200px; max-height: 200px;">
             {% endif %}</p>    
         </div>
         

@@ -13,7 +13,7 @@ body {
 
 .container tbody tr td {
     color: white;
-    
+    visibility: hidden;
 }
 
 .container tbody tr td:nth-child(3) {
@@ -33,6 +33,10 @@ body {
 
 .container .mt-3 {
     padding: 10px;
+}
+
+.container .mt-3 h1{
+    text-align: center;
 }
 
 .container .mt-3 tbody td img{
